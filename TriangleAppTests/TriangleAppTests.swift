@@ -25,13 +25,7 @@ class TriangleAppTests: XCTestCase {
     XCTAssertEqual(try detectTriangle(8, 10, 10), "Segitiga Sama Kaki")
     XCTAssertEqual(try detectTriangle(10, 8, 10), "Segitiga Sama Kaki")
   }
-
-  func testDetectRandomTriangle() {
-      XCTAssertThrowsError(try detectTriangle(3, 4, 5)) { error in
-        XCTAssertEqual(error as? TriangleError, TriangleError.inequalityInput)
-      }
-  }
-
+    
   func testInequalityTriangle() {
     XCTAssertThrowsError(try detectTriangle(4, 1, 2)) { error in
       XCTAssertEqual(error as? TriangleError, TriangleError.inequalityInput)
